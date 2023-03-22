@@ -6,9 +6,5 @@ export const WaveComponents: React.FC<IGlobalAttributes> = ({
   className,
   id,
 }) => {
-  return (
-    <StyledWave className={className} id={id}>
-      <img src={wave} alt="Wave" />
-    </StyledWave>
-  );
+  return <StyledWave className={className} id={id} backgroundImage={wave} />;
 };
