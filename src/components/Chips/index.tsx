@@ -12,7 +12,7 @@ export const ChipText: React.FC<IChipProps> = ({ className, id, title }) => {
   return (
     <StyledChip className={className} id={id}>
       <LinkRouter router="/">
-        <FontsH.H1 className="chip-text">{title || "Default"}</FontsH.H1>
+        <FontsH.H1 className="chip-text">{title || "Default "}</FontsH.H1>
       </LinkRouter>
     </StyledChip>
   );
