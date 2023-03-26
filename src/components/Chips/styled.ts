@@ -6,11 +6,12 @@ export const StyledChip = styled.div``;
 export const StyledLink = styled.div`
   text-align: center;
   margin: 10px;
+  
   .link-router {
     text-decoration: none;
   }
 
-  &:hover {
+  .chip-text:hover {
     border-bottom: 4px solid ${ColorsDesign.primary};
   }
 `;
