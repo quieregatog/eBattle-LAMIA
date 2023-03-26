@@ -8,9 +8,9 @@ interface IChipProps extends IGlobalAttributes {
   title: string;
 }
 
-export const ChipText: React.FC<IChipProps> = ({ className, id, title }) => {
+export const ChipText: React.FC<IChipProps> = ({ title, ...props }) => {
   return (
-    <StyledChip className={className} id={id}>
+    <StyledChip {...props}>
       <LinkRouter router="/">
         <FontsH.H1 className="chip-text">{title || "Default "}</FontsH.H1>
       </LinkRouter>
