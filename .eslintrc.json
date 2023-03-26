@@ -28,6 +28,15 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "no-console": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
+      }
+    ],
+    "no-inline-comments": "error",
     "@typescript-eslint/no-explicit-any": "off"
   }
 }

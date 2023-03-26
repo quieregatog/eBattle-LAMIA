@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { IGlobalAttributes } from "../../interface/IGlobal";
 import { StyledLink } from "./styled";
 
@@ -12,6 +11,7 @@ export const LinkRouter: React.FC<IChipLink> = ({
   className,
   id,
 }) => {
+  //
   return (
     <StyledLink className={className} id={id}>
       {/* <Link className="link-router" to={router}> */}
