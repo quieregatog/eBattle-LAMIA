@@ -1,19 +1,18 @@
-import { IGlobalAttributes } from "../../interface/IGlobal";
+import { IGlobalAlternative } from "../../interface/IGlobal";
 import { StyledLink } from "./styled";
 
-interface IChipLink extends IGlobalAttributes {
+interface IChipLink extends IGlobalAlternative {
   router: string;
 }
 
 export const LinkRouter: React.FC<IChipLink> = ({
   children,
   router,
-  className,
-  id,
+  ...props
 }) => {
   //
   return (
-    <StyledLink className={className} id={id}>
+    <StyledLink {...props}>
       {/* <Link className="link-router" to={router}> */}
       {children}
       {/* </Link> */}

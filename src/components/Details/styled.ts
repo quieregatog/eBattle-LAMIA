@@ -11,3 +11,16 @@ export const StyledWave = styled.div<IStyledComponents>`
   left: 0;
   right: 0;
 `;
+
+export const StyledUnsplash = styled.div<IStyledComponents>`
+  background-image: ${(props) => `url(${props.backgroundImage})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 760px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  right: 0;
+  width: 900px;
+`;

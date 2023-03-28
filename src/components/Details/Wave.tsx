@@ -3,8 +3,7 @@ import { IGlobalAttributes } from "../../interface/IGlobal";
 import { StyledWave } from "./styled";
 
 export const WaveComponents: React.FC<IGlobalAttributes> = ({
-  className,
-  id,
+  ...props
 }) => {
-  return <StyledWave className={className} id={id} backgroundImage={wave} />;
+  return <StyledWave {...props} backgroundImage={wave} />;
 };
