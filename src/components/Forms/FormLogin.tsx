@@ -6,7 +6,7 @@ import { FormStyled } from "./styled";
 
 export const FormLogin = () => {
   return (
-    <FormStyled>
+    <FormStyled margin="150px auto">
       <div className="container-form">
         <InputText
           name="email"

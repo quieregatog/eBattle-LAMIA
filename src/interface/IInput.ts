@@ -1,7 +1,7 @@
 import { IGlobalAttributes } from "./IGlobal";
 
 export interface IInput extends IGlobalAttributes, IInputBase {
-  type: "email" | "password";
+  type: "email" | "password" | "text";
   title: string;
 }
 
