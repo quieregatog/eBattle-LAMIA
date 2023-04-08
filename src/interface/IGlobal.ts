@@ -8,6 +8,7 @@ export interface IGlobalAlternative extends IGlobalAttributes {
 }
 
 export interface IStyledComponents {
+  margin?: string;
   backgroundColor?: string;
   backgroundImage?: string;
   width?: string;
