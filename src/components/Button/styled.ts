@@ -38,12 +38,12 @@ const StyledButtonTopic = styled.button<IStyledComponents>`
   align-items: center;
 `;
 
-const StyledButtonFilter = styled.button`
+const StyledButtonFilter = styled.button<IStyledComponents>`
   border: 0;
   background-color: ${ColorsDesign.primary};
   border-radius: 8px;
   height: 63px;
-  width: 149px;
+  width: ${(props) => props.width || "149px"};
   color: ${ColorsDesign.pureWhite};
   display: flex;
   align-items: center;
@@ -56,18 +56,23 @@ const StyledButtonFilter = styled.button`
 
   .icon-btn-filter {
     rotate: -90deg;
-    margin-left: 10px;
   }
 `;
 
-const StyledButtonCreated = styled.button`
-  border: 0;
-  background-color: ${ColorsDesign.confirm};
+const StyledButtonUpdated = styled.button<IStyledComponents>`
+  border: 2px solid
+    ${(props) =>
+      props.typeBord === "line"
+        ? ColorsDesign.confirm
+        : ColorsDesign.pureWhite};
+  background-color: ${(props) =>
+    props.typeBord === "fill" ? ColorsDesign.confirm : "transparent"};
   border-radius: 8px;
   width: 193px;
   padding: 0;
   height: 63px;
-  color: ${ColorsDesign.pureWhite};
+  color: ${(props) =>
+    props.typeBord === "line" ? ColorsDesign.confirm : ColorsDesign.pureWhite};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,5 +124,5 @@ export {
   StyledButtonPlay,
   StyledButtonTopic,
   StyledButtonFilter,
-  StyledButtonCreated,
+  StyledButtonUpdated,
 };

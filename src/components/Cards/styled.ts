@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IStyledComponents } from "../../interface/IGlobal";
 import { ColorsDesign } from "../../style";
 
 export const StyledCardClasses = styled.div`
@@ -75,5 +76,68 @@ export const StyledCardClasses = styled.div`
         }
       }
     }
+  }
+`;
+
+export const CardAwnsersStyled = styled.div<IStyledComponents>`
+  width: 250px;
+  height: 820px;
+  position: fixed;
+  top: 180px;
+  background-color: ${ColorsDesign.pureWhite};
+  box-shadow: 0 1px 5px rgba(100, 100, 100, 0.5);
+  border-radius: 8px;
+  left: 0;
+
+  .btn-create {
+    margin: 25px auto;
+  }
+
+  .awnsers-questions {
+    height: 86%;
+    overflow-y: scroll;
+
+    ::-webkit-scrollbar-track {
+      border: 1px solid ${ColorsDesign.secondary};
+      background-color: ${ColorsDesign.pureWhite};
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 10px;
+      border: 1px solid ${ColorsDesign.secondary};
+      background: #f4f4f4;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: ${ColorsDesign.primary};
+    }
+  }
+
+  .anwser-card {
+    margin: 10px auto;
+  }
+`;
+
+export const StyledControlCard = styled.div`
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .open-list {
+    transform: translateX(250px);
+  }
+
+  .card-list,
+  .open-list {
+    z-index: 1111111;
+  }
+
+  input#openlist-id:checked ~ .card-list {
+    transform: translateX(-350px);
+  }
+
+  input#openlist-id:checked ~ .open-list {
+    transform: translateX(0px);
   }
 `;
