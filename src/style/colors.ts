@@ -9,7 +9,10 @@ const ColorsDesign = {
   error: "#D00000",
   star: "#FFBA08",
   font: "#000000",
+  fontGray: "#cecece",
   borderTag: "#7D2EE2",
+
+  backgroundTransparentCheck: "#D3FFE0",
 };
 
 export default ColorsDesign;

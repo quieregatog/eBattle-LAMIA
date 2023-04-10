@@ -9,7 +9,9 @@ interface ILabel extends IGlobalAttributes {
 export const Label: React.FC<ILabel> = ({ title, ...props }) => {
   return (
     <LabelStyled {...props}>
-      <FontsH.H5>{title || "Label default"}</FontsH.H5>
+      <FontsH.H5 style={{ margin: 0 }} fontSize={24}>
+        {title || "Label default"}
+      </FontsH.H5>
     </LabelStyled>
   );
 };

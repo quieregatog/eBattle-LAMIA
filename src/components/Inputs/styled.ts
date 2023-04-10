@@ -40,3 +40,47 @@ export const StyledSearchInput = styled.div`
   border: 3px solid ${ColorsDesign.primary};
   border-radius: 8px;
 `;
+
+export const CheckboxStyled = styled.div`
+  width: 510px;
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 10px;
+    font: inherit;
+    color: currentColor;
+    width: 28px;
+    height: 28px;
+    border: 0.15em solid ${ColorsDesign.secondary};
+    border-radius: 0.6rem;
+    transform: translateY(-0.075em);
+  }
+
+  input[type="checkbox"]:checked {
+    appearance: none;
+    padding: 10px;
+    background-color: ${ColorsDesign.backgroundTransparentCheck};
+    border: 0.15em solid ${ColorsDesign.confirm};
+  }
+
+  label {
+    input {
+      display: inline-block;
+      outline: none;
+      font-family: "Comfortaa";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 29px;
+      /* or 34px */
+      margin: 0 10px;
+      text-align: justify;
+      color: rgba(0, 0, 0, 0.6);
+
+      border: 0;
+      width: 449px;
+      border-bottom: 2px solid ${ColorsDesign.primary};
+    }
+  }
+`;
