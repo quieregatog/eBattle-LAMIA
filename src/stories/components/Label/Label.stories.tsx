@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Label } from "../../components/Label";
-import { defaultConst } from "../AttributesDefault";
+import { Label } from "../../../components/Label";
+import { defaultConst } from "../../AttributesDefault";
 
 export default {
-    title: "Components/Label", 
+    title: "Components/Label/Label", 
     component: Label,
     argsType: {
         title: {
