@@ -10,11 +10,13 @@ import { PageStyled } from "../styled";
 import { PageLoginStyled } from "./styled";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
   const { dataHook, handleSetData } = useHookForm();
   const dispatch = useDispatchApp();
   const { activeToast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
     if (dataHook) {
@@ -30,7 +32,10 @@ export const LoginPage = () => {
     const { msg } = message;
 
     if (message.isError && msg) activeToast({ message: msg, type: "error" });
-    if (!message.isError && msg) activeToast({ message: msg, type: "success" });
+    if (!message.isError && msg) {
+      activeToast({ message: msg, type: "success" });
+      navigate("/games", { replace: true });
+    }
   }, [message.msg, message.isError, message]);
 
   return (

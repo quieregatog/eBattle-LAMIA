@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   #title-button {
     font-size: 24px;
@@ -26,6 +27,7 @@ const StyledButton = styled.button`
 
 const StyledButtonTopic = styled.button<IStyledComponents>`
   padding: 12px 38px;
+  cursor: pointer;
   border: 0;
   background-color: ${(props) =>
     props.active ? ColorsDesign.secondary : ColorsDesign.pureWhite};
@@ -40,6 +42,7 @@ const StyledButtonTopic = styled.button<IStyledComponents>`
 
 const StyledButtonFilter = styled.button<IStyledComponents>`
   border: 0;
+  cursor: pointer;
   background-color: ${ColorsDesign.primary};
   border-radius: 8px;
   height: 63px;
@@ -65,6 +68,7 @@ const StyledButtonUpdated = styled.button<IStyledComponents>`
       props.typeBord === "line"
         ? ColorsDesign.confirm
         : ColorsDesign.pureWhite};
+  cursor: pointer;
   background-color: ${(props) =>
     props.typeBord === "fill" ? ColorsDesign.confirm : "transparent"};
   border-radius: 8px;
@@ -82,6 +86,7 @@ const StyledButtonPlay = styled.button`
   border: 0;
   background-color: ${ColorsDesign.confirm};
   border-radius: 8px;
+  cursor: pointer;
   width: 193px;
   padding: 0;
   height: 43px;
@@ -97,6 +102,7 @@ const StyledButtonPlay = styled.button`
 
 export const StyledButtonClear = styled.button`
   border: 0;
+  cursor: pointer;
   background: ${ColorsDesign.pureWhite};
   color: ${ColorsDesign.primary};
   display: flex;
@@ -107,6 +113,7 @@ export const StyledButtonClear = styled.button`
 
 export const StyledButtonPublic = styled.div<IStyledComponents>`
   width: 50px;
+  cursor: pointer;
   border: 4px solid
     ${(props) => (props.active ? ColorsDesign.confirm : ColorsDesign.primary)};
   background-color: ${ColorsDesign.pureWhite};

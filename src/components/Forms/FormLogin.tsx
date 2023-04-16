@@ -1,14 +1,9 @@
 import React from "react";
-import { IGlobalAttributes } from "../../interface/IGlobal";
+import { IForm } from "../../interface/IForm";
 import { FontsLink } from "../../style/fonts";
 import { ButtonDefault } from "../Button/Default";
 import { InputText } from "../Inputs/Text";
 import { FormStyled } from "./styled";
-
-interface IForm extends IGlobalAttributes {
-  handleSetData: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onSubmit: () => void;
-}
 
 export const FormLogin: React.FC<IForm> = ({ handleSetData, onSubmit }) => {
   return (
