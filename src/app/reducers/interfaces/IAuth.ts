@@ -12,6 +12,16 @@ export interface IAuthRequest {
   password: string;
 }
 
+export interface IRegisterRequest {
+  email: string;
+  name: string;
+  password: string;
+  intitution: string;
+  city: string;
+  workType: string;
+  educationLevel: string;
+}
+
 interface IAuth {
   username: string;
   password: string;

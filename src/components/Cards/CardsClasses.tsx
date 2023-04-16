@@ -27,9 +27,9 @@ export const CardClasses: React.FC<IClassesCard> = ({
   return (
     <StyledCardClasses {...props}>
       <div className="card">
-        <Legend1>{tag}</Legend1>
+        <Legend1 fontSize={29}>{tag}</Legend1>
         <div className="body-data">
-          <FontsT.T1>{name}</FontsT.T1>
+          <FontsT.T1 fontSize={30}>{name}</FontsT.T1>
         </div>
         <div className="data-details">
           <FontsP.P3 className="text-detail-card">

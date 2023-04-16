@@ -1,5 +1,8 @@
 import { ActionReducerMapBuilder, createSlice } from "@reduxjs/toolkit";
-import { fetchLoginAuthReducer } from "../Api/Auth/thunk";
+import {
+  fetchLoginAuthReducer,
+  fetchRegisterAuthReducer,
+} from "../Api/Auth/thunk";
 import IAuthReducer from "../interfaces/IAuth";
 
 const initialState: IAuthReducer = {
@@ -48,6 +51,31 @@ export const authSlice = createSlice({
           state.message.msg = payload.toString();
         }
         state.message.msg = "Houve um erro no login";
+      }
+    );
+    builder.addCase(
+      fetchRegisterAuthReducer.fulfilled,
+      (state: IAuthReducer, { payload }) => {
+        state.loading = false;
+        state.message.msg = "Usuário criado com sucesso";
+        state.message.isError = false;
+        state.message.code = 200;
+      }
+    );
+
+    builder.addCase(fetchRegisterAuthReducer.pending, (state: IAuthReducer) => {
+      state.loading = true;
+    });
+
+    builder.addCase(
+      fetchRegisterAuthReducer.rejected,
+      (state: IAuthReducer, { payload }) => {
+        state.loading = false;
+        state.message.isError = true;
+        if (payload) {
+          state.message.msg = payload.toString();
+        }
+        state.message.msg = "Houve um erro no registro";
       }
     );
   },
