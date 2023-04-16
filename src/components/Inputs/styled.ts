@@ -73,7 +73,6 @@ export const CheckboxStyled = styled.div`
       font-style: normal;
       font-weight: 400;
       font-size: 29px;
-      /* or 34px */
       margin: 0 10px;
       text-align: justify;
       color: rgba(0, 0, 0, 0.6);

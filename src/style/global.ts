@@ -5,6 +5,11 @@ export default createGlobalStyle`
 
     }
 
+    html {
+        width: 100vh;
+        height: 100vh;
+    }
+
     body {
         border: 0;
         margin: 0;

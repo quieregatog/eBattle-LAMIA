@@ -18,7 +18,6 @@ export const TextAreaComponent = styled.textarea`
   font-weight: 400;
   font-size: 25px;
   line-height: 138%;
-  /* or 34px */
 
   text-align: justify;
 `;

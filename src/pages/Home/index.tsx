@@ -14,7 +14,9 @@ const HomePage = () => {
       <PageHomeStyled>
         <div className="presentation">
           <div className="header-home">
-            <FontsH.H3 id="title-home">Bem vindo</FontsH.H3>
+            <FontsH.H3 id="title-home" fontSize={55}>
+              Bem vindo
+            </FontsH.H3>
             <FontsP.P1 id="description-home">
               {descriptionHome.Description}
             </FontsP.P1>

@@ -8,7 +8,9 @@ import { FormStyled } from "./styled";
 export const FormRegister = () => {
   return (
     <FormStyled>
-      <FontsT.T1 color={ColorsDesign.secondary}>Cadastro</FontsT.T1>
+      <FontsT.T1 color={ColorsDesign.secondary} fontSize={35}>
+        Cadastro
+      </FontsT.T1>
       <div className="container-form">
         <InputText
           name="name"

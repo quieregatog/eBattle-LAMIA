@@ -11,11 +11,5 @@ export const LinkRouter: React.FC<IChipLink> = ({
   ...props
 }) => {
   //
-  return (
-    <StyledLink {...props}>
-      {/* <Link className="link-router" to={router}> */}
-      {children}
-      {/* </Link> */}
-    </StyledLink>
-  );
+  return <StyledLink {...props}>{children}</StyledLink>;
 };

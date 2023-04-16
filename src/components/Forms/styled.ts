@@ -12,7 +12,6 @@ export const FormStyled = styled.form<IStyledComponents>`
 
   .container-form {
     width: 100%;
-    /* height: 270px; */
   }
   .btn-formLogin {
     width: 100%;
