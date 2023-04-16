@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { FormLogin } from "../../components/Forms/FormLogin";
-import { useHookForm } from "../../hook/useFormData";
+import { FormLogin } from "../../../components/Forms/FormLogin";
+import { useHookForm } from "../../../hook/useFormData";
 
 export default {
-  title: "Components/FormLogin",
+  title: "Components/Forms/FormLogin",
   component: FormLogin,
   args: {},
 } as ComponentMeta<typeof FormLogin>;

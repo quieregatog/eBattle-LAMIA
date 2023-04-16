@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ChipText } from "../../components/Chips";
-import { defaultConst } from "../AttributesDefault";
+import { ChipText } from "../../../components/Chips";
+import { defaultConst } from "../../AttributesDefault";
 
 export default {
   title: "Components/Chips/Text",
