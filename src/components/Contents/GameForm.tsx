@@ -21,7 +21,7 @@ export const GamesPage: React.FC<IGameForm> = ({
   onSubmit,
   ...props
 }) => {
-  return (
+  return ( 
     <PageGamesStyled {...props}>
       <BackPage name={type === "edit" ? "Edição" : "Criar game"} />
       <ContentEditStyled
