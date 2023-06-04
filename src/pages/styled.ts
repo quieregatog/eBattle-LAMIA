@@ -8,7 +8,7 @@ export const PageStyled = styled.div`
   box-sizing: border-box;
 `;
 
-export const ContentEditStyled = styled.div`
+export const ContentEditStyled = styled.form`
   width: 83%;
   margin: auto auto 0;
 

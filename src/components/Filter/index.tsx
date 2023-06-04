@@ -1,5 +1,5 @@
 import { IGlobalAttributes } from "../../interface/IGlobal";
-import { ButtonUpdate } from "../Button/Create";
+import { ButtonAction } from "../Button/Create";
 import { ButtonFilter } from "../Button/Filter";
 import { ResultsSearch } from "../Chips/Results";
 import { InputSearch } from "../Inputs/Search";
@@ -14,9 +14,12 @@ export const FilterGame: React.FC<IGlobalAttributes> = ({ ...props }) => {
           <ButtonFilter title="Filtros" />
           <ButtonFilter title="A-Z" />
         </div>
-        <ButtonUpdate
+        <ButtonAction
           styleBord="line"
           type="create"
+          redirection={{
+            url: "/games/edit",
+          }}
           title="Criar jogo"
           className="bottom-filter"
         />

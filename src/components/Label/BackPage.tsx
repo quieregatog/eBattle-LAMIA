@@ -11,7 +11,7 @@ interface ILabelBack extends IGlobalAttributes {
 
 export const BackPage: React.FC<ILabelBack> = ({ name, ...props }) => {
   return (
-    <LabelBackStyled maxWidth="150" {...props}>
+    <LabelBackStyled maxWidth="210" {...props}>
       <IoReturnUpBackOutline color={ColorsDesign.secondary} size={30} />
       <FontsH.H5 fontSize={33} fontWeight={500}>
         {name}
