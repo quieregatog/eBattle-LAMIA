@@ -13,8 +13,8 @@ export const ResultsSearch: React.FC<IResultSearch> = ({
 }) => {
   return (
     <StyledResult {...props}>
-      {topics.map((item) => (
-        <ChipTag title={item} className="topic-result" />
+      {topics.map((item, index) => (
+        <ChipTag title={item} key={index} className="topic-result" />
       ))}
       <ButtonClear title="Limpar filtros" />
     </StyledResult>

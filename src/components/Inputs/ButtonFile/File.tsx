@@ -1,18 +1,38 @@
 import React from "react";
-import { IGlobalAttributes } from "../../../interface/IGlobal";
-import { InputButtonFileStyled } from "./styled";
 import { MdAttachFile } from "react-icons/md";
-import { FontsH } from "../../../style/fonts";
+import { IGlobalAttributes } from "../../../interface/IGlobal";
 import { ColorsDesign } from "../../../style";
+import { FontsH } from "../../../style/fonts";
+import { InputButtonFileStyled } from "./styled";
 
 interface IInputFile extends IGlobalAttributes {
   title: string;
+  onChange?: (e: any) => void;
 }
 
-export const InputFile: React.FC<IInputFile> = ({ title, ...props }) => {
+export const InputFile: React.FC<IInputFile> = ({
+  title,
+  onChange,
+  ...props
+}) => {
+  const handleSaveFile = (e: any) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+
+    reader.onload = () => {
+      onChange(reader.result);
+    };
+  };
+
   return (
     <InputButtonFileStyled htmlFor="input-file" {...props}>
-      <input type="file" id="input-file" name="file" />
+      <input
+        accept="image/*"
+        type="file"
+        id="input-file"
+        onChange={handleSaveFile}
+        name="file"
+      />
 
       <FontsH.H5 fontSize={20} fontWeight={300} color={ColorsDesign.pureWhite}>
         {title}

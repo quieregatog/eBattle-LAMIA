@@ -53,6 +53,7 @@ export const authSlice = createSlice({
         state.message.msg = "Houve um erro no login";
       }
     );
+    
     builder.addCase(
       fetchRegisterAuthReducer.fulfilled,
       (state: IAuthReducer, { payload }) => {

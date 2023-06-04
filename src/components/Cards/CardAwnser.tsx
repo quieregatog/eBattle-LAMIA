@@ -1,4 +1,4 @@
-import { ButtonUpdate } from "../Button/Create";
+import { ButtonAction } from "../Button/Create";
 import { Answer } from "../Chips/Answer";
 import { OpenList } from "../Chips/OpenList";
 import { UpdateChip } from "../Chips/Update";
@@ -32,7 +32,7 @@ export const CardAwnsers = () => {
             </UpdateChip>
           ))}
         </div>
-        <ButtonUpdate
+        <ButtonAction
           styleBord="line"
           className="btn-create"
           title="Nova pergunta"
