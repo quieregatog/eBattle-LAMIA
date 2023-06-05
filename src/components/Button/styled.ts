@@ -94,6 +94,10 @@ const StyledButtonPlay = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  .link{
+    text-decoration: none;
+  }
 
   .text-btn-filter {
     font-size: 24px;

@@ -7,7 +7,6 @@ export const fetchLoginAuthReducer = createAsyncThunk(
   "login/auth",
   async ({ ...dataUser }: IAuthRequest, { rejectWithValue }) => {
     try {
-      
       const { data } = await api("login", {
         data: dataUser,
         method: "POST",

@@ -10,6 +10,7 @@ import { CreateGame } from "../pages/Games/Create";
 import { EditGame } from "../pages/Games/Edit";
 import HomePage from "../pages/Home";
 import ProtectedRoute from "./PrivateRouter";
+import { StartGame } from "../pages/Games/Start";
 
 export const RoutesMain = () => {
   const {
@@ -48,6 +49,15 @@ export const RoutesMain = () => {
         element={
           <ProtectedRoute user={userAuth?.token ? true : false}>
             <EditGame />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/games/start"
+        element={
+          <ProtectedRoute user={userAuth?.token ? true : false}>
+            <StartGame />
           </ProtectedRoute>
         }
       />

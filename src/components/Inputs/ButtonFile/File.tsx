@@ -19,9 +19,11 @@ export const InputFile: React.FC<IInputFile> = ({
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
 
-    reader.onload = () => {
-      onChange(reader.result);
-    };
+    if (onChange) {
+      reader.onload = () => {
+        onChange(reader.result);
+      };
+    }
   };
 
   return (
