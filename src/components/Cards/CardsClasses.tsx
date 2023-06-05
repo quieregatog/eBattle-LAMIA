@@ -48,7 +48,7 @@ export const CardClasses: React.FC<IClassesCard> = ({
           </FontsP.P3>
         </div>
         <ChipPublic className="btn-public" isPublic={publicCard} />
-        <ButtonPlay className="btn-play" title="Hora do jogo" />
+        <ButtonPlay className="btn-play" title="Hora do jogo" htmlFor="start" />
       </div>
     </StyledCardClasses>
   );
